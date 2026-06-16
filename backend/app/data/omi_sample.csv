@@ -1,0 +1,15 @@
+city,zone,omi_min_per_mq,omi_max_per_mq
+Milano,centro,6500,11000
+Milano,semicentro,4200,6500
+Milano,periferia,2500,4000
+Milano,,3500,6000
+Roma,centro,5500,9500
+Roma,semicentro,3500,5500
+Roma,periferia,2200,3500
+Roma,,3000,5000
+Torino,centro,2500,4000
+Torino,,1800,3000
+Napoli,centro,3000,5000
+Napoli,,2000,3500
+Bologna,,3000,4800
+Firenze,,3500,5500

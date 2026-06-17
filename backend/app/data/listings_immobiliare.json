@@ -1,0 +1,38 @@
+[
+  {
+    "titolo": "Trilocale luminoso zona Navigli",
+    "prezzo_vendita": "250.000 €",
+    "superficie": "80 m²",
+    "locali": 3,
+    "citta": "Milano",
+    "indirizzo": "Via Vigevano 12",
+    "latitudine": 45.4655,
+    "longitudine": 9.1715,
+    "link": "https://example.com/immobiliare/1",
+    "foto": "https://picsum.photos/seed/imm1/600/400"
+  },
+  {
+    "titolo": "Bilocale ristrutturato Isola",
+    "prezzo_vendita": 195000,
+    "superficie": 55,
+    "locali": 2,
+    "citta": "Milano",
+    "indirizzo": "Via Borsieri 5",
+    "latitudine": 45.4869,
+    "longitudine": 9.1899,
+    "link": "https://example.com/immobiliare/2",
+    "foto": "https://picsum.photos/seed/imm2/600/400"
+  },
+  {
+    "titolo": "Attico panoramico centro",
+    "prezzo_vendita": 720000,
+    "superficie": 120,
+    "locali": 4,
+    "citta": "Roma",
+    "indirizzo": "Via del Corso 100",
+    "latitudine": 41.9028,
+    "longitudine": 12.4796,
+    "link": "https://example.com/immobiliare/3",
+    "foto": "https://picsum.photos/seed/imm3/600/400"
+  }
+]

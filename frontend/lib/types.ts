@@ -73,3 +73,19 @@ export interface EvaluationResponse {
   data_risks: DataRisk[];
   suggestions: string[];
 }
+
+export interface Listing {
+  id: string;
+  title: string | null;
+  price_eur: number;
+  mq: number;
+  price_per_mq: number;
+  rooms: number | null;
+  address: string | null;
+  city: string;
+  lat: number | null;
+  lon: number | null;
+  url: string | null;
+  image_url: string | null;
+  sources: string[];
+}

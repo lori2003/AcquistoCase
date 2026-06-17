@@ -9,11 +9,17 @@ const COLORS: Record<string, string> = {
 export function ScoreGauge({ score }: { score: number }) {
   const color = scoreColor(score);
   return (
-    <div role="meter" aria-valuenow={score} aria-valuemin={0} aria-valuemax={100}>
-      <span style={{ color: COLORS[color], fontSize: "2rem", fontWeight: 700 }}>
+    <div
+      className="score-gauge"
+      role="meter"
+      aria-valuenow={score}
+      aria-valuemin={0}
+      aria-valuemax={100}
+    >
+      <span className="value" style={{ color: COLORS[color] }}>
         {score}
       </span>
-      <span>/100</span>
+      <span className="meta">/100</span>
     </div>
   );
 }

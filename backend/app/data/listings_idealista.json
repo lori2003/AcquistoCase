@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Appartamento 3 locali Navigli",
+    "price": 252000,
+    "size": 81,
+    "rooms": 3,
+    "city": "Milano",
+    "address": "Via Vigevano 12",
+    "lat": 45.4656,
+    "lng": 9.1716,
+    "url": "https://example.com/idealista/9",
+    "image": "https://picsum.photos/seed/ide9/600/400"
+  },
+  {
+    "title": "Monolocale moderno Porta Romana",
+    "price": 165000,
+    "size": 42,
+    "rooms": 1,
+    "city": "Milano",
+    "address": "Viale Sabotino 8",
+    "lat": 45.4501,
+    "lng": 9.1985,
+    "url": "https://example.com/idealista/10",
+    "image": "https://picsum.photos/seed/ide10/600/400"
+  },
+  {
+    "title": "Loft di design Trastevere",
+    "price": 480000,
+    "size": 95,
+    "rooms": 3,
+    "city": "Roma",
+    "address": "Via della Lungaretta 20",
+    "lat": 41.8896,
+    "lng": 12.4695,
+    "url": "https://example.com/idealista/11",
+    "image": "https://picsum.photos/seed/ide11/600/400"
+  }
+]

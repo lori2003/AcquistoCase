@@ -44,6 +44,15 @@ class FakeMarketPriceProvider:
         return OmiRange(min_per_mq=self.omi_min, max_per_mq=self.omi_max)
 
 
+class FakeListingSource:
+    def __init__(self, name: str, raws: list[dict]) -> None:
+        self.name = name
+        self._raws = raws
+
+    def fetch(self, city: str) -> list[dict]:
+        return list(self._raws)
+
+
 class FakeAIReporter:
     def __init__(self, should_fail: bool = False, text: str = "Report AI di prova.") -> None:
         self.should_fail = should_fail

@@ -15,7 +15,7 @@ export function ResultsPanel({ result }: { result: EvaluationResponse }) {
           : "Non del tutto in linea con il tuo obiettivo"}
       </p>
 
-      <ul>
+      <ul className="bars">
         <li>Prezzo: {components.price_score}/100</li>
         <li>Distanza trasporti: {components.distance_score}/100</li>
         <li>Servizi: {components.services_score}/100</li>

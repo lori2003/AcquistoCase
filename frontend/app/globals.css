@@ -1,0 +1,233 @@
+:root {
+  --bg-0: #060914;
+  --bg-1: #0b1020;
+  --glass: rgba(20, 28, 51, 0.55);
+  --glass-border: rgba(120, 160, 255, 0.18);
+  --cyan: #22e3ff;
+  --magenta: #c850ff;
+  --green: #2af598;
+  --orange: #ffb347;
+  --red: #ff5d73;
+  --text: #e7ecff;
+  --muted: #93a0c8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  font-family: "Segoe UI", "SF Pro Display", system-ui, -apple-system, sans-serif;
+  background: var(--bg-0);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(40, 80, 255, 0.18), transparent 40%),
+    radial-gradient(circle at 85% 0%, rgba(200, 80, 255, 0.16), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(34, 227, 255, 0.12), transparent 45%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1));
+  background-attachment: fixed;
+}
+
+.app-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+  background: linear-gradient(90deg, var(--cyan), var(--magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: start;
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 1.4rem;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--cyan);
+  margin-bottom: 1rem;
+}
+
+.section-title::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 12px var(--cyan);
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.85rem;
+}
+
+input,
+select {
+  background: rgba(8, 12, 24, 0.7);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(34, 227, 255, 0.15);
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #04121a;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--cyan), var(--green));
+  box-shadow: 0 8px 24px rgba(34, 227, 255, 0.3);
+  transition: transform 0.12s, filter 0.12s;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+[role="alert"] {
+  color: var(--red);
+  font-size: 0.88rem;
+  margin: 0.4rem 0;
+}
+
+.score-gauge {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.score-gauge .value {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 0 0 18px currentColor;
+}
+
+.bars li {
+  list-style: none;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+ul {
+  padding-left: 1.1rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  color: var(--cyan);
+  background: rgba(34, 227, 255, 0.08);
+}
+
+.listing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.listing-card .price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.listing-card .meta {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.listing-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.map-wrap {
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #0b1020;
+}

@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { evaluate } from "@/lib/api-client";
+import { evaluate, fetchListings } from "@/lib/api-client";
 import type { EvaluationRequest } from "@/lib/types";
 
 const request: EvaluationRequest = {
@@ -32,5 +32,25 @@ describe("evaluate", () => {
   it("throws on a non-ok response", async () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: false, status: 500 }));
     await expect(evaluate(request, "http://api.test")).rejects.toThrow(/500/);
+  });
+});
+
+describe("fetchListings", () => {
+  it("GETs /api/listings with the city query and returns the array", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => [{ id: "1" }],
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const result = await fetchListings("Milano", "http://api.test");
+
+    expect(fetchMock).toHaveBeenCalledWith("http://api.test/api/listings?city=Milano");
+    expect(result).toEqual([{ id: "1" }]);
+  });
+
+  it("throws on a non-ok response", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: false, status: 404 }));
+    await expect(fetchListings("Milano", "http://api.test")).rejects.toThrow(/404/);
   });
 });

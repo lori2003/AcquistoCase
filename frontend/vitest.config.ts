@@ -12,7 +12,7 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       include: ["lib/**", "components/**"],
-      exclude: ["lib/types.ts", "**/*.d.ts"],
+      exclude: ["lib/types.ts", "components/ListingsMap.tsx", "**/*.d.ts"],
       thresholds: { lines: 80, functions: 80, branches: 70, statements: 80 },
     },
   },

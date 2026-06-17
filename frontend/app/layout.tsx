@@ -1,3 +1,6 @@
+import "./globals.css";
+import "leaflet/dist/leaflet.css";
+
 export const metadata = {
   title: "AcquistoCase",
   description: "Valuta se una casa è giusta per il tuo obiettivo",

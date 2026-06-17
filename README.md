@@ -25,6 +25,14 @@ backend/    # API FastAPI + logica di scoring + test (pytest, copertura 100% su 
 frontend/   # App Next.js + componenti + test (Vitest/RTL + e2e Playwright)
 ```
 
+## Avvio rapido (Windows)
+
+Fai doppio clic su **`start.bat`** nella cartella principale: al primo avvio
+installa le dipendenze di backend e frontend, poi apre due finestre (backend e
+frontend) e il browser su http://localhost:3000. Servono solo
+[Python 3.11+](https://www.python.org/downloads/) e [Node.js 20+](https://nodejs.org/)
+installati. Per fermare l'app chiudi le due finestre.
+
 ## Avvio in locale
 
 Backend:
